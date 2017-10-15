@@ -16,7 +16,8 @@ var MongoStore = require("connect-mongo")(session)
 var userRoute = require("./routes/user")
 var app = express();
 
-mongoose.connect('mongodb://localhost/shopping', {useMongoClient: true})
+// mongoose.connect('mongodb://localhost/shopping', {useMongoClient: true})
+mongoose.connect('mongodb://naveen:nyg201yy@ds119395.mlab.com:19395/snapgame', {useMongoClient: true})
 mongoose.Promise = global.Promise
 // import passport config
 require('./config/passport');
