@@ -1,0 +1,21 @@
+<div class='row'>
+    <div class='col-lg-6 col-lg-offset-3'>
+        {{# if resetCh}}
+        <div class="alert alert-info" role="alert">
+            {{# each reset}}
+                {{this}}
+            {{/each}}
+        </div>
+        {{/if}}
+        <h4>Enter your email</h4>
+        <p>A mail will be sent to your email</p>
+        <form action='/user/forgot' method='POST'>
+            <div class='form-group'>
+                <label for='reset'>Email:</label>
+                <input type='email' name='email' id='reset' class='form-control' required autofocus></input>
+            </div>
+            <input type='hidden' name='_csrf' value='{{csrfToken}}'></input>
+            <button class='btn btn-primary'>Submit</button>
+        </form>
+    </div>
+</div>
